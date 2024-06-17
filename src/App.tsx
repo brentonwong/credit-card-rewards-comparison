@@ -2,7 +2,7 @@ import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 
 import "./App.css";
 import Select from "react-select";
-import { CARDS } from "./data/constants";
+import { CARDS } from "./data/cards";
 import { CardDetails } from "./components/CardDetails";
 import { AnimatedNumber } from "./components/AnimatedNumber";
 
@@ -174,7 +174,11 @@ const App: FC = () => {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {CARDS.filter((c) => c.id !== selectedCardId).map((card) => (
+              {CARDS.filter(
+                (c) =>
+                  c.id !== selectedCardId &&
+                  c.rewardOptions.some((r) => r.dollarValue !== 0)
+              ).map((card) => (
                 <CardDetails
                   annualSpend={comparedAnnualSpend}
                   card={card}

@@ -10,7 +10,17 @@ export const toRewardPercentage = (card: Card): number => {
 
 export const toRewardRulesDescription = (rule: RewardRule): string => {
   if (rule.max === Infinity) return `$${rule.min}+`;
-  return `$${rule.min}-${rule.max}`;
+  return `$${rule.min}-$${rule.max}`;
+};
+
+export const toPeriodSymbol = (period: "monthly" | "annual") => {
+  switch (period) {
+    case "annual":
+      return "A";
+    case "monthly":
+    default:
+      return "M";
+  }
 };
 
 export const formatCurrency = (value: number): string => {

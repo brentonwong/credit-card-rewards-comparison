@@ -6,8 +6,9 @@ export type Card = {
   minimumLimit: number;
   rewardRate: number;
   rewardRateRules?: RewardRule[];
+  rewardOptions: RewardOption[];
   link?: string;
-  tags: CardTag[];
+  tags: string[];
 };
 
 export type RewardRule = {
@@ -17,6 +18,18 @@ export type RewardRule = {
   period: "monthly" | "annual";
 };
 
+export type RewardOption = {
+  currency: RewardCurrency;
+  period: "monthly" | "annual"; // annual denotes we use the full balance
+  rules: Omit<RewardRule, "period">[];
+  dollarValue: number;
+};
+
 export type CardProvider = "ANZ" | "TSB";
 
-export type CardTag = "airpoints" | "cashback" | "hot-points";
+export type RewardCurrency =
+  | "airpoints"
+  | "cashback"
+  | "hot-points"
+  | "true-rewards"
+  | "points";

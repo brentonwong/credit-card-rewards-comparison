@@ -12,6 +12,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 100,
     link: "https://www.americanexpress.com/nz/credit-cards/airnz-base-credit-card/?linknav=nz-amex-cardshop-recommended-airpoints",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "airpoints",
+        dollarValue: 1,
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 100,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "amex-airpoints-platinum",
@@ -22,6 +36,44 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 59,
     link: "https://www.americanexpress.com/nz/credit-cards/airpoints-cards/airpoints-platinum-card/?linknav=nz-amex-cardshop-recommended-airpointsplat",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "airpoints",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 59,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
+  },
+  {
+    id: "amex-gold",
+    name: "American Express Gold Rewards Card",
+    image: images["amex-gold.png"],
+    annualFee: 200,
+    minimumLimit: 0,
+    rewardRate: 2 / 1,
+    link: "https://www.americanexpress.com/nz/credit-cards/gold-credit-card/",
+    tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "points",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 2 / 1,
+          },
+        ],
+        dollarValue: 160,
+      },
+    ],
   },
 
   // ANZ Cards
@@ -35,6 +87,7 @@ export const CARDS: Card[] = [
     rewardRate: 0,
     link: "https://www.anz.co.nz/personal/credit-cards/low-rate-visa/",
     tags: [],
+    rewardOptions: [],
   },
   {
     id: "anz-airpoints-visa",
@@ -43,7 +96,22 @@ export const CARDS: Card[] = [
     annualFee: 65,
     minimumLimit: 500,
     rewardRate: 1 / 175,
+    link: "https://www.anz.co.nz/personal/credit-cards/airpoints-visa/",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "airpoints",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 175,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
   {
     id: "anz-airpoints-visa-platinum",
@@ -52,7 +120,22 @@ export const CARDS: Card[] = [
     annualFee: 150,
     minimumLimit: 8000,
     rewardRate: 1 / 110,
+    link: "https://www.anz.co.nz/personal/credit-cards/airpoints-visa-platinum/",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "airpoints",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 110,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
   {
     id: "anz-cash-back-visa",
@@ -63,6 +146,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 150,
     link: "https://www.anz.co.nz/personal/credit-cards/cashback-visa/",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "cashback",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 150,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
   {
     id: "anz-cash-back-visa-platinum",
@@ -73,6 +170,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 120,
     link: "https://www.anz.co.nz/personal/credit-cards/cashback-platinum/",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "cashback",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 120,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
 
   // ASB
@@ -85,6 +196,7 @@ export const CARDS: Card[] = [
     rewardRate: 0,
     link: "https://www.asb.co.nz/credit-cards/visa-light.html",
     tags: [],
+    rewardOptions: [],
   },
   {
     id: "asb-visa-rewards",
@@ -95,6 +207,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 150,
     link: "https://www.asb.co.nz/credit-cards/visa-rewards.html",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "true-rewards",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 150,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
   {
     id: "asb-visa-platinum-rewards",
@@ -105,6 +231,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 100,
     link: "https://www.asb.co.nz/credit-cards/visa-platinum-rewards.html",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "true-rewards",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 100,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
 
   // TSB
@@ -117,6 +257,7 @@ export const CARDS: Card[] = [
     rewardRate: 0,
     link: "https://www.tsb.co.nz/cards/debit-mastercard",
     tags: [],
+    rewardOptions: [],
   },
   {
     id: "tsb-low-rate-mastercard",
@@ -127,6 +268,7 @@ export const CARDS: Card[] = [
     rewardRate: 0,
     link: "https://www.tsb.co.nz/cards/low-rate-mastercard",
     tags: [],
+    rewardOptions: [],
   },
   {
     id: "tsb-platinum-mastercard",
@@ -137,6 +279,20 @@ export const CARDS: Card[] = [
     rewardRate: 1 / 100,
     link: "https://www.tsb.co.nz/cards/platinum-mastercard",
     tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "cashback",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 100,
+          },
+        ],
+        dollarValue: 1,
+      },
+    ],
   },
 
   // Westpac
@@ -150,6 +306,7 @@ export const CARDS: Card[] = [
     rewardRate: 0,
     link: "https://www.westpac.co.nz/credit-cards/fee-free-card/",
     tags: [],
+    rewardOptions: [],
   },
   {
     id: "westpac-airpoints-mastercard",
@@ -158,6 +315,25 @@ export const CARDS: Card[] = [
     annualFee: 70,
     minimumLimit: 0,
     rewardRate: 1 / 150,
+    rewardOptions: [
+      {
+        period: "monthly",
+        currency: "cashback",
+        dollarValue: 1,
+        rules: [
+          {
+            max: 3500,
+            min: 0,
+            rate: 1 / 150,
+          },
+          {
+            max: Infinity,
+            min: 3500,
+            rate: 1 / 300,
+          },
+        ],
+      },
+    ],
     rewardRateRules: [
       {
         max: 3500,
@@ -196,6 +372,25 @@ export const CARDS: Card[] = [
         period: "monthly",
       },
     ],
+    rewardOptions: [
+      {
+        period: "monthly",
+        currency: "cashback",
+        dollarValue: 1,
+        rules: [
+          {
+            max: 7000,
+            min: 0,
+            rate: 1 / 110,
+          },
+          {
+            max: Infinity,
+            min: 7000,
+            rate: 1 / 220,
+          },
+        ],
+      },
+    ],
     link: "https://www.westpac.co.nz/credit-cards/airpoints/westpac-airpoints-platinum-mastercard/",
     tags: [],
   },
@@ -206,6 +401,25 @@ export const CARDS: Card[] = [
     annualFee: 310,
     minimumLimit: 0,
     rewardRate: 1 / 95,
+    rewardOptions: [
+      {
+        period: "monthly",
+        currency: "airpoints",
+        dollarValue: 1,
+        rules: [
+          {
+            max: 15000,
+            min: 0,
+            rate: 1 / 95,
+          },
+          {
+            max: Infinity,
+            min: 15000,
+            rate: 1 / 190,
+          },
+        ],
+      },
+    ],
     rewardRateRules: [
       {
         max: 15000,

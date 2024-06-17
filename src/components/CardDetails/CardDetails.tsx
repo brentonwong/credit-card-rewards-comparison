@@ -5,6 +5,7 @@ import {
   formatCurrency,
   getRewardsAfterAnnualFee,
   isRewardEligible,
+  toPeriodSymbol,
   toRewardPercentage,
   toRewardRulesDescription,
 } from "./utils";
@@ -21,7 +22,7 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
   return (
     <div
       className={classNames(
-        "p-4 md:p-8 rounded-md w-full border-solid border shadow-lg grid grid-cols-1 gap-4 md:gap-8 grid-rows-[auto,1fr]",
+        "p-4 md:p-8 rounded-md w-full border-solid border shadow-lg grid grid-cols-1 gap-4 md:gap-8 grid-rows-[auto,1fr,auto,auto]",
         {
           "md:grid-cols-4 md:grid-flow-row md:auto-rows-min md:gap-y-4":
             displayCard,
@@ -59,8 +60,8 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
           <div className="grid grid-cols-[100px_minmax(0,_1fr)] gap-y-1 text-sm">
             <div className="font-bold">Annual Fee</div>
             <div>${card.annualFee}</div>
-            <div className="font-bold">Min Limit</div>
-            <div>${card.minimumLimit}</div>
+            {/* <div className="font-bold">Min Limit</div>
+            <div>${card.minimumLimit}</div> */}
             {isRewardEligible(card) && (
               <>
                 <div className="font-bold">Reward Rate</div>
@@ -69,8 +70,9 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
                     toRewardPercentage(card).toFixed(2) + "%"}
                   {card.rewardRateRules?.map((rule) => (
                     <>
-                      {toRewardRulesDescription(rule)} (
-                      {(rule.rate * 100).toFixed(2) + "%"})
+                      {(rule.rate * 100).toFixed(2) + "%"} |{" "}
+                      {toRewardRulesDescription(rule)}
+                      <em>{toPeriodSymbol(rule.period)}</em>
                       <br />
                     </>
                   ))}
@@ -82,7 +84,7 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
           </div>
         </div>
       </div>
-      {isRewardEligible(card) ? (
+      {isRewardEligible(card) && (
         <>
           <div
             className={classNames(
@@ -106,10 +108,13 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
             )}
           </div>
         </>
-      ) : (
-        <>
-          <div></div>
-        </>
+      )}
+      {card.link && (
+        <div className="">
+          <a target="_blank" href={card.link} rel="nofollow">
+            Learn More
+          </a>
+        </div>
       )}
     </div>
   );
