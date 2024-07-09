@@ -44,37 +44,37 @@ export const CARDS: Card[] = [
           {
             min: 0,
             max: Infinity,
-            rate: 1 / 70,
+            rate: 1 / 59,
           },
         ],
         dollarValue: 1,
       },
     ],
   },
-  // {
-  //   id: "amex-gold",
-  //   name: "American Express Gold Rewards Card",
-  //   image: images["amex-gold.png"],
-  //   annualFee: 200,
-  //   minimumLimit: 0,
-  //   rewardRate: 2 / 1,
-  //   link: "https://www.americanexpress.com/nz/credit-cards/gold-credit-card/",
-  //   tags: [],
-  //   rewardOptions: [
-  //     {
-  //       period: "annual",
-  //       currency: "points",
-  //       rules: [
-  //         {
-  //           min: 0,
-  //           max: Infinity,
-  //           rate: 2 / 1,
-  //         },
-  //       ],
-  //       dollarValue: 160,
-  //     },
-  //   ],
-  // },
+  {
+    id: "amex-gold",
+    name: "American Express Gold Rewards Card",
+    image: images["amex-gold.png"],
+    annualFee: 200,
+    minimumLimit: 0,
+    rewardRate: 2 / 1,
+    link: "https://www.americanexpress.com/nz/credit-cards/gold-credit-card/",
+    tags: [],
+    rewardOptions: [
+      {
+        period: "annual",
+        currency: "points",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 2 / 1,
+          },
+        ],
+        dollarValue: 0.16,
+      },
+    ],
+  },
 
   // ANZ Cards
 
