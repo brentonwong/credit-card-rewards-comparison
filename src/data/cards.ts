@@ -33,7 +33,7 @@ export const CARDS: Card[] = [
     image: images["amex-airpoints-platinum.png"],
     annualFee: 195,
     minimumLimit: 0,
-    rewardRate: 1 / 59,
+    rewardRate: 1 / 70,
     link: "https://www.americanexpress.com/nz/credit-cards/airpoints-cards/airpoints-platinum-card/?linknav=nz-amex-cardshop-recommended-airpointsplat",
     tags: [],
     rewardOptions: [
@@ -44,7 +44,7 @@ export const CARDS: Card[] = [
           {
             min: 0,
             max: Infinity,
-            rate: 1 / 59,
+            rate: 1 / 70,
           },
         ],
         dollarValue: 1,
