@@ -437,4 +437,29 @@ export const CARDS: Card[] = [
     link: "https://www.westpac.co.nz/credit-cards/airpoints/westpac-airpoints-world-mastercard/",
     tags: [],
   },
+  // dosh
+  {
+    id: "dosh-visa-debit",
+    name: "Dosh Visa Debit",
+    annualFee: 0,
+    minimumLimit: 0,
+    rewardOptions: [
+      {
+        currency: "cashback",
+        dollarValue: 1,
+        period: "annual",
+        rules: [
+          {
+            min: 0,
+            max: Infinity,
+            rate: 1 / 100,
+          },
+        ],
+      },
+    ],
+    rewardRate: 1 / 100,
+    tags: [],
+    image: images["dosh-visa-debit.png"],
+    link: "https://www.dosh.nz/doshback-rewards",
+  },
 ];

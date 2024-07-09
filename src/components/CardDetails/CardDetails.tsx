@@ -60,8 +60,6 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
           <div className="grid grid-cols-[100px_minmax(0,_1fr)] gap-y-1 text-sm">
             <div className="font-bold">Annual Fee</div>
             <div>${card.annualFee}</div>
-            {/* <div className="font-bold">Min Limit</div>
-            <div>${card.minimumLimit}</div> */}
             {isRewardEligible(card) && (
               <>
                 <div className="font-bold">Reward Rate</div>
@@ -110,9 +108,14 @@ export const CardDetails: FC<Props> = ({ annualSpend, card, displayCard }) => {
         </>
       )}
       {card.link && (
-        <div className="">
-          <a target="_blank" href={card.link} rel="nofollow">
-            Learn More
+        <div className={classNames("w-full", { "md:col-span-4": displayCard })}>
+          <a
+            target="_blank"
+            href={card.link}
+            rel="nofollow"
+            className="w-full bg-blue-800 block text-center text-white rounded py-4"
+          >
+            View Website
           </a>
         </div>
       )}
